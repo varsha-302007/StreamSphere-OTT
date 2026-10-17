@@ -1,5 +1,4 @@
-const API_BASE_URL = 'http://localhost:5000/api';
-
+const API_BASE_URL = 'https://stream-sphere-ott-4yl3.vercel.app/api';
 function getHeaders() {
   const headers = { 'Content-Type': 'application/json' };
   const token = localStorage.getItem('streamsphere_token');
