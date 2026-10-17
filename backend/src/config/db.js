@@ -12,9 +12,12 @@ const pool = mysql.createPool({
     database: process.env.DB_NAME || 'streamsphere_db',
     port: parseInt(process.env.DB_PORT, 10) || 3306,
 
-    // Enable SSL for the Aiven cloud database
-    ssl: process.env.DB_HOST
-        ? { rejectUnauthorized: true }
+    // Secure SSL connection to Aiven
+    ssl: process.env.DB_SSL_CA
+        ? {
+            ca: process.env.DB_SSL_CA,
+            rejectUnauthorized: true
+        }
         : undefined,
 
     waitForConnections: true,
@@ -23,6 +26,7 @@ const pool = mysql.createPool({
     decimalNumbers: true
 });
 
+// Test the database connection
 async function testConnection() {
     let connection;
 
