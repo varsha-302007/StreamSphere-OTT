@@ -247,16 +247,4 @@ Every report query is directly visible and verifiable in the application under *
 
 ---
 
-## 10. Common DBMS Viva Questions & Answers
 
-**Q1: Why did you choose MySQL InnoDB over MyISAM?**  
-*Answer:* InnoDB supports ACID transactions, foreign key constraints with cascading/restrict rules, row-level locking, and crash recovery. MyISAM lacks foreign key constraint enforcement and transactions.
-
-**Q2: What is the difference between a CHECK constraint and a TRIGGER?**  
-*Answer:* A `CHECK` constraint evaluates simple intra-row conditions (e.g., `rating BETWEEN 1.0 AND 5.0`). A `TRIGGER` can execute procedural logic across multiple tables, query other relations, or abort transactions using custom exception signals (`SIGNAL SQLSTATE '45000'`).
-
-**Q3: Why is `ON DELETE RESTRICT` used on Genres and SubscriptionPlans instead of CASCADE?**  
-*Answer:* Cascading deletion on a genre would unintentionally erase all movies under that genre. Restrict guarantees catalog preservation until an administrator explicitly reassigns or removes those movies.
-
-**Q4: How did you prevent SQL Injection in your backend?**  
-*Answer:* All SQL statements in Node.js utilize parameterized prepared statements via `db.execute('SELECT ... WHERE id = ?', [id])`, separating executable SQL commands from user-supplied data.
