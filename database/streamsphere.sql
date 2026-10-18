@@ -3,7 +3,7 @@
 -- Database Definition & Population Script
 -- Database: streamsphere_db
 -- Target RDBMS: MySQL 8.0+
--- Author: Senior Database Architect / Full-Stack Engineer
+
 -- ============================================================================
 
 DROP DATABASE IF EXISTS streamsphere_db;
