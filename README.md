@@ -1,12 +1,12 @@
 # StreamSphere — OTT Platform Management System
-**Academic DBMS Laboratory Mini-Project**  
+** DBMS Laboratory Mini-Project**  
 *Comprehensive Relational Database System with MySQL 8.0, Node.js/Express REST API, and Modern React Dashboard.*
 
 ---
 
 ## 1. Executive Summary & Project Overview
 
-**StreamSphere** is a complete, enterprise-grade Over-The-Top (OTT) streaming platform management system built specifically for academic DBMS laboratory evaluation and technical viva demonstrations. 
+**StreamSphere** is a complete,  (OTT) streaming platform management system built specifically for  DBMS laboratory
 
 Unlike simple UI prototypes or systems that mock data in local storage or JavaScript arrays, **StreamSphere is strictly database-first**: every single KPI card, content catalog item, transaction, rating, and report is queried in real time from a normalized **MySQL 8.0 InnoDB** relational database.
 
